@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agustinus Henan</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/asset/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/asset/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/asset/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/asset/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="msapplication-TileColor" content="#da532c">
+
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="index.html"><img class="logo" src="asset/icon.png" alt="logo"></a>
+        </div>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#abt">ABOUT</a></li>
+                <li><a href="#project">PROJECT</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+        <button class="hamburger-menu">&#9776;</button>
+    </header> 
+
+    <div class="head" id="home">
+        <h1>AGUSTINUS HENAN</h1>
+        <p>Seorang Pengembang Frontend yang berfokus pada pengembangan Antarmuka Pengguna untuk situs web. Berperan dalam membangun bagian depan yang memimpin kesuksesan keseluruhan produk.</p>
+
+    </div>
+
+    <div class="abt" id="abt">
+        <h1>ABOUT ME</h1>
+        <P>Here you will find more information about me</P>
+        <div class="about" id="about">
+            <ul class="cur">
+                <li class="card">
+                    <span class="profil">
+                        <img class="pp" src="asset/agung-pp.jpg" alt="Agustinus Henan">
+                    </span>
+                    <span class="kt">
+                        <div class="tprofil">
+                            <p class="lorempp">“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel earum delectus unde ab ratione odit reprehenderit, eius neque debitis architecto ipsa, iste sint laudantium tempora a sequi ipsum aliquid! Ullam sint error nobis quo, suscipit optio sequi voluptas blanditiis iste impedit possimus odio, facere, quasi consequatur.”</p>
+                            <br>
+                            <p class="p">Agustinus Henan</p>
+                            <p class="p">Front-End Developer</p>
+                            <br>
+                            <hr>
+                            <br>
+                        </div>
+                        <div class="pmedsos">
+                            <span><a target="_blank" rel="noopener" href="https://www.instagram.com/agung.henan/"><img class="logomedsos" src="asset/medsos/6929237_instagram_icon.svg" alt="Ig"></a></span>
+                            <span><a target="_blank" rel="noopener" href="mailto:agustinushenan01@gmail.com?subject=Subjek%20Email&body=Isi%20Email"><img class="logomedsos" src="asset/medsos/7089163_gmail_google_icon.svg" alt="Gmail"></a></span>
+                            <span><a target="_blank" rel="noopener" href="https://www.linkedin.com/in/agustinus-henan/"><img class="logomedsos" src="asset/medsos/341103_linkedin_icon.svg" alt="Linkedin"></a></span>
+                        </div>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+
+    <div class="project" id="project">
+        <h1>PROJECT</h1>
+        <p>Here you will find personal projects I created</p>
+        <figure>
+            <img src="/asset/projek-ruang-ngoding.png" alt="Ruang Ngoding">
+            <figcaption>
+                <a href="http://ruang-ngoding.000webhostapp.com/" target="_blank" rel="noopener">Ruang Ngoding</a>
+                <p>Ruang Ngoding is a website that my friends and I created which aims to be a coding learning platform</p>
+            </figcaption>
+        </figure>
+    </div>
+
+    <div class="contact" id="contact">
+        <h1>CONTACT</h1>
+        <p>You can contact me by filling in the form below and I will contact you soon</p>
+        <form id="contactForm" onsubmit="sendEmail(); reset(); return false;">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter Your name" required>
+        
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter Your email" required>
+        
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Enter Your Message" required></textarea>
+        
+            <button type="button">Send</button>
+        </form>
+    </div>
+
+    <div class="foot">
+        <h3>SOSIAL</h3>
+        <div class="sosail">
+            <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/agustinus-henan/"><img class="sosialgam" src="/asset/sosial/linkedin_icon.svg" alt=""></a>
+            <a target="_blank" rel="noopener" href="https://github.com/agustinushenan01"><img class="sosialgam" src="/asset/sosial/github_icon.svg" alt=""></a>
+            <a target="_blank" rel="noopener" href="https://www.instagram.com/agung.henan/"><img class="sosialgam" src="/asset/sosial/instagram_icon.svg" alt=""></a>
+        </div>
+        <footer>
+            <div class="footer">
+                <hr>
+                <div class="Copyright"><p>Copyright ©2023 | Agustinus Henan</p></div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail() {
+            Email.send({
+            Host : "smtp.gmail.com",
+            Username : "agustinushenan01@gmail.com",
+            Password : "password",
+            To : 'agustinushenan01@gmail.com',
+            From : document.getElementById("email").value,
+            Subject : "New Contact",
+            Body : "Name: ": + document.getElementById("name").value +
+                    "<br> Email: " + document.getElementById("email").value +
+                    "<br> Massage: " + document.getElementById("massage").value
+        }).then(
+        message => alert("Message Send Succesfully")
+        );
+        }
+    </script>
+    <!-- <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        emailjs.init("service_z0mkz5s");
+
+        function sendEmail() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+
+            emailjs.send("service_z0mkz5s", "template_8zrtf2j", {
+                to_name: "Agustinus Henan",
+                from_name: name,
+                message: message
+            })
+            .then(function(response) {
+                console.log("Email sent successfully:", response);
+                // Tambahkan logika lainnya sesuai kebutuhan Anda
+                alert("Email sent successfully!");
+            })
+            .catch(function(error) {
+                console.log("Error sending email:", error);
+                // Tambahkan logika lainnya sesuai kebutuhan Anda
+                alert("Error sending email. Please try again later.");
+            });
+        }
+
+    </script> -->
+</body>
+</html>
