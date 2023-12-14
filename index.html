@@ -72,7 +72,7 @@
         <h1>PROJECT</h1>
         <p>Here you will find personal projects I created</p>
         <figure>
-            <img src="projek-ruang-ngoding.png" alt="Ruang Ngoding">
+            <a href="http://ruang-ngoding.000webhostapp.com/" target="_blank" rel="noopener"><img src="projek-ruang-ngoding.png" alt="Ruang Ngoding"></a>
             <figcaption>
                 <a href="http://ruang-ngoding.000webhostapp.com/" target="_blank" rel="noopener">Ruang Ngoding</a>
                 <p>Ruang Ngoding is a website that my friends and I created which aims to be a coding learning platform</p>
@@ -113,24 +113,6 @@
     </div>
 
     <script src="script.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-        function sendEmail() {
-            Email.send({
-            Host : "smtp.gmail.com",
-            Username : "agustinushenan01@gmail.com",
-            Password : "password",
-            To : 'agustinushenan01@gmail.com',
-            From : document.getElementById("email").value,
-            Subject : "New Contact",
-            Body : "Name: ": + document.getElementById("name").value +
-                    "<br> Email: " + document.getElementById("email").value +
-                    "<br> Massage: " + document.getElementById("massage").value
-        }).then(
-        message => alert("Message Send Succesfully")
-        );
-        }
-    </script>
     <!-- <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
         emailjs.init("service_z0mkz5s");
